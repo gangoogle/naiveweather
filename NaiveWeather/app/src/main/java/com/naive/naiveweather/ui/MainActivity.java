@@ -17,6 +17,8 @@ import com.naive.naiveweather.utils.Logger;
 
 import net.margaritov.preference.colorpicker.ColorPickerDialog;
 
+import java.net.HttpURLConnection;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -46,6 +48,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener ,
         mBtInHome.setOnClickListener(this);
         mBtChooseColor.setBackgroundColor(CommonUtils.getCustomColor(ctx));
         mBtChooseColor.setOnClickListener(this);
+
     }
 
 
@@ -59,7 +62,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener ,
                 break;
             case R.id.bt_choose_color:
                 ColorPickerDialog mDialog = new ColorPickerDialog(ctx, 0xff333333);
-                mDialog.setTitle("选择主题颜色");
+                mDialog.setTitle("选择主题颜色!");
                 mDialog.setOnColorChangedListener(this);
                 mDialog.setAlphaSliderVisible(true);
                 mDialog.setHexValueEnabled(true);
