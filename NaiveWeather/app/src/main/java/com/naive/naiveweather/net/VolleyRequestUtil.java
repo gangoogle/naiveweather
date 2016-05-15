@@ -1,4 +1,4 @@
-package com.naive.naiveweather.utils;
+package com.naive.naiveweather.net;
 
 import android.content.Context;
 import android.content.DialogInterface;

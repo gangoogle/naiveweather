@@ -1,7 +1,6 @@
-package com.naive.naiveweather.utils;
+package com.naive.naiveweather.net;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;

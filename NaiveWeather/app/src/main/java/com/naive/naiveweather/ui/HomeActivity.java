@@ -11,8 +11,8 @@ import com.android.volley.VolleyError;
 import com.naive.naiveweather.R;
 import com.naive.naiveweather.utils.ConstantsUtil;
 import com.naive.naiveweather.utils.Logger;
-import com.naive.naiveweather.utils.VolleyListenerInterface;
-import com.naive.naiveweather.utils.VolleyRequestUtil;
+import com.naive.naiveweather.net.VolleyListenerInterface;
+import com.naive.naiveweather.net.VolleyRequestUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
