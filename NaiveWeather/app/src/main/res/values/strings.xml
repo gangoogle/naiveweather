@@ -1,4 +1,10 @@
 <resources>
+
     <string name="app_name">NaiveWeather</string>
     <string name="str_SetColor">设置主题颜色</string>
+    <string name="dialog_info_ok">我知道了</string>
+    //volley错误
+    <string name="generic_server_down">服务器响应超时</string>
+    <string name="no_internet">无网络连接</string>
+    <string name="generic_error">数据错误</string>
 </resources>
