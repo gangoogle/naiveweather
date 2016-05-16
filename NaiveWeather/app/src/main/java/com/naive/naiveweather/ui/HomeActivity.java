@@ -50,8 +50,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                     @Override
                     public void onMyError(VolleyError error) {
-                        Toast.makeText(ctx, "erro", Toast.LENGTH_SHORT).show();
+
                     }
+
                 };
                 VolleyRequestUtil.RequestGet(ctx, url, "110", volleyListenerInterface);
                 break;

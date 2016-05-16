@@ -50,4 +50,9 @@ public  abstract  class VolleyListenerInterface {
         };
         return mErrorListener;
     }
+
+    /**
+     * 取消求请回调（取消Dialog）
+     */
+    public void cancelListener(){};
 }

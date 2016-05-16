@@ -26,12 +26,13 @@ public class VolleyRequestUtil {
     * tag：当前请求的标签；
     * volleyListenerInterface：VolleyListenerInterface接口；
     * */
-    public static void RequestGet(Context context, String url, final String tag, VolleyListenerInterface volleyListenerInterface) {
+    public static void RequestGet(Context context, String url, final String tag, final VolleyListenerInterface volleyListenerInterface) {
 
         DialogUtil.showDialog(context, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
                 LIMSApplication.getRequestQueue().cancelAll(tag);
+                volleyListenerInterface.cancelListener();
             }
         });
         // 清除请求队列中的tag标记请求
@@ -55,7 +56,14 @@ public class VolleyRequestUtil {
     * params：POST请求内容；
     * volleyListenerInterface：VolleyListenerInterface接口；
     * */
-    public static void RequestPost(Context context, String url, String tag, final Map<String, String> params, VolleyListenerInterface volleyListenerInterface) {
+    public static void RequestPost(Context context, String url, final  String tag, final Map<String, String> params, final VolleyListenerInterface volleyListenerInterface) {
+        DialogUtil.showDialog(context, new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                LIMSApplication.getRequestQueue().cancelAll(tag);
+                volleyListenerInterface.cancelListener();
+            }
+        });
         // 清除请求队列中的tag标记请求
         LIMSApplication.getRequestQueue().cancelAll(tag);
         // 创建当前的POST请求，并将请求内容写入Map中

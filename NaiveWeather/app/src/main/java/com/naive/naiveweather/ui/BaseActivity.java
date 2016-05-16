@@ -12,6 +12,7 @@ import android.view.WindowManager;
 
 import com.naive.naiveweather.R;
 import com.naive.naiveweather.utils.CommonUtils;
+import com.naive.naiveweather.utils.Logger;
 
 /**
  * Created by zgyi on 2016/5/13.
@@ -21,6 +22,7 @@ public class BaseActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStatusColor();
+        Logger.d("YZG","BaseOncreate");
     }
 
     public void setContentV(int  viewId){
