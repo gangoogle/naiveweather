@@ -1,11 +1,11 @@
 package com.naive.naiveweather.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.naive.naiveweather.R;
@@ -30,8 +30,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-        ctx=this;
+        ctx = this;
         mBtTestinterface.setOnClickListener(this);
+
 
     }
 
@@ -45,7 +46,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 VolleyListenerInterface volleyListenerInterface = new VolleyListenerInterface(this) {
                     @Override
                     public void onMySuccess(String result) {
-                        Toast.makeText(ctx, result, Toast.LENGTH_SHORT).show();
+                      startActivity(new Intent(ctx,WeatherActivity.class));
                     }
 
                     @Override

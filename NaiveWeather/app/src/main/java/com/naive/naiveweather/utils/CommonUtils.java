@@ -3,6 +3,7 @@ package com.naive.naiveweather.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.view.View;
 import android.widget.Toast;
 
 /**
@@ -42,4 +43,7 @@ public class CommonUtils {
         int color = sp.getInt(ConstantsUtil.CUSTOMCOLOR, -14518833);
         return color;
     }
+
+
+
 }
